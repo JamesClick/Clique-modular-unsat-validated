@@ -1,39 +1,19 @@
-# Modular Clique UNSAT – Validated Data and Proofs
+# Clique-modular-unsat-validated
 
-This repository contains only the **validated, audited, and filtered results** of the Modular Clique UNSAT project.
+Modular Residue Method for UNSAT Detection: A Restricted Conjecture for Linear Boolean Formulas.
 
----
+## Repository Structure
 
-## Directory Structure
+. ├── main.tex              # LaTeX source for the article ├── refs.bib              # Bibliography database ├── LICENSE               # MIT License ├── README.md             # Project overview and quick start ├── datasets/             # Validated CSV datasets │   ├── .gitkeep │   └── ... ├── data/                 # Final CSV outputs from validation │   └── ... ├── proofs/               # CNF formulas and DRAT proofs │   ├── .gitkeep │   └── ... ├── docs/                 # Generated PDF, supplementary materials │   ├── .gitkeep │   └── ... ├── scripts/              # Validation and plotting scripts │   ├── .gitkeep │   └── fix_and_validate_tests.py ├── figures/              # Generated plot images (PDF/PNG) │   └── ... └── .github/              # CI configuration └── workflows/ └── ci.yml
 
-- `datasets/`: Clean `.csv` files with residues, execution time, and SAT/UNSAT status
-- `graphs/`: Graphs and plots showing the modular behavior (S(φ) = 0 or ≠ 0)
-- `proofs/`: Only `.drat` proofs with their corresponding `.cnf` files
-- `docs/`: Formal proof (PDF), research summary, and supporting documents
+## Quick Start
 
----
+```bash
+git clone https://github.com/JamesClick/Clique-modular-unsat-validated.git
+cd Clique-modular-unsat-validated
 
-## Validation Criteria
+# 1. Generate and validate datasets
+python3 scripts/fix_and_validate_tests.py
 
-The following filters were applied to all data:
-
-- No instance where `k_clique > n_vertices`
-- No `time_to_unsat = 0.0` with `n_vertices > 50`
-- Only modular residues consistent with the conjecture:
-  - For UNSAT formulas: **S(φ) = 0** for all weights and moduli
-  - For SAT formulas: **S(φ) ≠ 0** in at least one case
-
----
-
-## Project Status
-
-This repository represents the **clean and final version** of the project, ready for:
-
-- Scientific publication
-- Peer review
-- Submission to conferences or journals
-
----
-
-**Author:** Jamesson Richard Campos Santos da Graça  
-**GitHub:** [JamesClick](https://github.com/JamesClick)
+# 2. Compile the article
+pdflatex main.tex && bibtex main && pdflatex main.tex
