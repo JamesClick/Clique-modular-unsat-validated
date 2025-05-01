@@ -1,0 +1,9 @@
+n_vertices,k_clique,is_modular,expected_result,description,cnf_file,solver_result
+3,3,True,SAT,K3 (complete graph),k3.cnf,SAT
+4,4,True,SAT,K4 (complete graph),k4.cnf,SAT
+5,3,True,UNSAT,"K1,4 (star graph)",k1_4.cnf,UNSAT
+5,3,False,UNSAT,C5 (cycle graph),c5.cnf,UNSAT
+4,2,False,SAT,Two disconnected edges,k2_disjoint.cnf,SAT
+1,1,True,SAT,Single vertex,single.cnf,SAT
+3,2,False,UNSAT,Empty graph (3 vertices),empty.cnf,UNSAT
+4,3,False,UNSAT,"K2,2 (bipartite)",k2_2.cnf,UNSAT

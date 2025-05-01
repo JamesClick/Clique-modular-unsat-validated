@@ -1,0 +1,8 @@
+n_vertices,k_clique,is_modular,expected_result,description
+3,3,True,SAT,K3 (complete graph with 3 vertices)
+4,4,True,SAT,K4 (complete graph with 4 vertices)
+5,3,True,UNSAT,"K1,4 (star graph with 5 vertices)"
+5,3,False,UNSAT,C5 (cycle of 5 vertices)
+4,2,False,SAT,Two disconnected edges (K2 + K2)
+1,1,True,SAT,Single isolated vertex
+2,1,False,SAT,Single edge (K2)
