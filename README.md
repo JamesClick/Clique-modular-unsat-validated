@@ -20,9 +20,10 @@ pdflatex main.tex && bibtex main && pdflatex main.tex
 
 ---
 
-## 🛠️ Como Rodar os Scripts
+## 🛠️ How to Run the Scripts
 
-1. **Clone o repositório** (se ainda não tiver feito):
+1. **Clone the repository** (if you haven't already):
 ```bash
 git clone https://github.com/JamesClick/Clique-modular-unsat-validated.git
 cd Clique-modular-unsat-validated
+
