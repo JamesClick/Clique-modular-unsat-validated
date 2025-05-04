@@ -36,9 +36,6 @@ Our conjecture proposes that:
 ## Graphical Insights
 
 **XOR-SAT vs Tseitin Residues:**
-(./graphs/xor_vs_tseitin_plot.png)
-
-**PHP(6,5) Distribution:**
 ![Histogram](./graphs/histograms_combo.png)
 
 ---
