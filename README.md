@@ -17,3 +17,12 @@ python3 scripts/fix_and_validate_tests.py
 
 # 2. Compile the article
 pdflatex main.tex && bibtex main && pdflatex main.tex
+
+---
+
+## 🛠️ Como Rodar os Scripts
+
+1. **Clone o repositório** (se ainda não tiver feito):
+```bash
+git clone https://github.com/JamesClick/Clique-modular-unsat-validated.git
+cd Clique-modular-unsat-validated
